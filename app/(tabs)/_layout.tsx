@@ -1,6 +1,7 @@
 
 import { Tabs } from "expo-router";
 import Feather from '@expo/vector-icons/Feather';
+import Octicons from '@expo/vector-icons/Octicons';
 export default function TabsLayout() {
 
   return (
@@ -8,22 +9,22 @@ export default function TabsLayout() {
   screenOptions={{
     tabBarShowLabel:true,
     tabBarLabelStyle: {
-     color: '#fff',
+      
     },
     tabBarItemStyle:{
       width: '100%',
       height: '100%',
-      justifyContent: 'center',
-      alignItems: 'center',
+      
     },
     tabBarStyle: {
       backgroundColor: '#000',
+      borderColor: '#000',
       height: 60,
-      justifyContent: 'center',
-      alignItems:'center',
       borderRadius: 50,
-      margin:20,
-      
+      margin: 10,
+      position: 'absolute',
+      bottom: 20, 
+      zIndex: 100,    
 
     }
   }}
@@ -34,7 +35,7 @@ export default function TabsLayout() {
     
     tabBarIcon: ({focused}) =>(
       <>
-      <Feather name="home" size={24} color={focused ? '#239b56' : '#fff'} />
+      <Feather name="home" size={24} color={focused ? '#246bfd' : '#fff'} />
       </>
     )
       
@@ -42,10 +43,22 @@ export default function TabsLayout() {
   } />
    <Tabs.Screen name="search" options={
     {title: "search",
+      
       headerShown: false,
       tabBarIcon: ({focused}) =>(
         <>
-        <Feather name="search" size={24} color={focused ? '#239b56' : '#fff'} />
+        <Feather name="search" size={24} color={focused ? '#246bfd' : '#fff'}/> 
+        </>
+      )
+    }
+  } />
+  <Tabs.Screen name="save" options={
+    {title: "save",
+      
+      headerShown: false,
+      tabBarIcon: ({focused}) =>(
+        <>
+        <Octicons name="checklist" size={24} color={focused ? '#246bfd' : '#fff'} /> 
         </>
       )
     }

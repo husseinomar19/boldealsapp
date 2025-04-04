@@ -1,33 +1,58 @@
+import { Text, SafeAreaView, ScrollView, View } from "react-native";
 
-import { Text, SafeAreaView ,FlatList, View } from "react-native";
-const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-  ];
 export default function Search() {
   return (
-    <SafeAreaView>
-        <Text className="text-black ">Search</Text>
-        <FlatList className="w-full "
-        data={DATA}
-        
-        renderItem={({item}) => (
-            <View className="bg-slate-300">
-                <Text className="text-white font-bold text-[20px]">{item.title}</Text>
-            </View>
-        )}
-        keyExtractor={item => item.id}
-      />
+    <SafeAreaView className="flex-1 bg-white">
+      <Text className="text-black text-xl font-bold p-4">Search</Text>
+
+      <ScrollView
+      showsVerticalScrollIndicator={false} className="px-4">
+        <View className="bg-slate-300 p-4 rounded-md">
+          <Text className="text-black text-base">
+            ndustry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. ...
+            ndustry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. ...
+            ndustry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. ...
+            ndustry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. ...
+            ndustry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived
+            not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. ...
+            {/* (knip of herhaal voor demo) */}
+          </Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

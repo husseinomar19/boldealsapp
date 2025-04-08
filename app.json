@@ -1,20 +1,21 @@
 {
   "expo": {
-    "name": "boldealsapp",
-    "slug": "boldealsapp",
+    "name": "MTDB",
+    "slug": "MTDB",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/logo.png",
+    "icon": "./assets/images/mtdb.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/mtdb.png",
+        "backgroundColor": "#FF5733"
       }
     },
     "web": {
@@ -27,10 +28,11 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/logo.png",
+          "image": "./assets/images/mtdb.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#FF5733"
+
         }
       ]
     ],

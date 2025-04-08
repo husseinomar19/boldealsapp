@@ -52,9 +52,17 @@ export default function Index() {
 
   return (
     <SafeAreaView className="bg-black flex-1 px-2 pt-4">
-      <View className="w-full pl-3 pr-5">
+      <View className="flex-row items-start justify-start w-full">
+        <Image
+          source={require("../../assets/images/mtdb.png")}
+          className="w-[100px] h-[100px]"
+          resizeMode="contain"
+          alt="Logo"
+        />
+      </View>
+      <View className="w-full pl-3 pr-5 mt-2">
        <TextInput
-       className="bg-white rounded-md p-3"
+       className="bg-white rounded-[50px] p-3"
        placeholder="Search" 
        placeholderTextColor={'#000'}/>
        
@@ -71,13 +79,14 @@ export default function Index() {
         className="w-full"
         showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={{ alignItems: "flex-start", justifyContent: "center", }}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <Link
             href={`/save`}
-            className="flex-1 justify-center items-center mb-4"
+            className="flex justify-center items-center mb-4 gap-5"
           >
-            <View className="m-1">
+            <View className="m-1 p-1">
               <Image
                 source={{ uri: `https://image.tmdb.org/t/p/w500${item.poster_path}` }}
                 className="w-[116px] h-[220px] rounded-md"
@@ -85,7 +94,7 @@ export default function Index() {
                 alt={item.name}
               />
               <Text
-                className="text-white text-[12px] mt-1"
+                className="text-white text-[12px] mt-1 w-[116px]"
                 numberOfLines={1}
               >
                 {item.name}
